@@ -4,7 +4,7 @@ import openpyxl
 
 
 def load_data():
-    path = "D:\codefirst.io\Tkinter Excel App\people.xlsx"
+    path = "C:\\Users\\travi\\OneDrive\\Documents\\GitHub\\tkinter-excel-app\\people.xlsx"
     workbook = openpyxl.load_workbook(path)
     sheet = workbook.active
 
