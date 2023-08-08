@@ -56,6 +56,8 @@ def toggle_mode():
 root = tk.Tk()
 root.title("Renewal Tracker")
 
+
+
 icon_path = "C:\\Users\\travi\\OneDrive\\Documents\\GitHub\\tkinter-excel-app\\file_accept_checklist_check_document_icon_251831.ico"
 root.iconbitmap(icon_path)
 
@@ -69,7 +71,14 @@ combo_list = ["Approved", "Quote Sent", "Needs Quote"]
 frame = ttk.Frame(root)
 frame.pack()
 
-widgets_frame = ttk.LabelFrame(frame, text="Add Entry")
+tabControl = ttk.Notebook(root)
+tab1 = ttk.Frame(tabControl)
+tab2 = ttk.Frame(tabControl)
+tabControl.add(tab1, text="Tab 1")
+tabControl.add(tab2, text="Tab 2")
+tabControl.pack(expand=1,fill="both")
+
+widgets_frame = ttk.LabelFrame(tab2, text="Add Entry")
 widgets_frame.grid(row=0, column=0, padx=20, pady=10)
 
 name_entry = ttk.Entry(widgets_frame)
